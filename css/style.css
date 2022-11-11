@@ -70,8 +70,12 @@ img {
   padding-bottom: 25px;
 }
 .header-post{
-  fill: #2196f3;
-  
+  fill:#757575;
+  margin-right: 10px;
+ 
+}
+.header-post:hover, .header-post:focus{
+  fill: var(--accent-text-color);
 }
 
 .header-right {
@@ -96,6 +100,7 @@ img {
   color: var(--title-text-color);
   padding-top: 32px;
   padding-bottom: 32px;
+  
 }
 
 .header-contacts:hover,
@@ -115,6 +120,18 @@ img {
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
+  background-image: linear-gradient(
+    to right,rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)),
+    url(../images/Img-15.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
 .container {
@@ -184,7 +201,17 @@ img {
   margin-bottom: 10px;
   margin-left: 0px;
 }
+.skills-icon{
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.icon-background{
+  background-color:#F5F4FA;
+text-align: center;
+margin-bottom: 30px;
+width: 270px;
 
+}
 .skills-text {
   font-size: 14px;
   line-height: calc(24 / 14);
@@ -207,7 +234,7 @@ img {
   text-align: center;
 }
 
-.activity-list {
+.activity-list,.client-list {
   display: flex;
   align-items: baseline;
   justify-content: center;
@@ -246,7 +273,7 @@ img {
   justify-content: center;
 }
 
-.team-title {
+.team-title, .client-title{
   font-size: 36px;
   line-height: calc(42 / 36);
   text-align: center;
@@ -296,15 +323,76 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
+  margin-bottom: 16px;
 }
 .social-icon{
-background-color: #2196f3;
-  width: 20;
-  height: 20;
-  fill: #757575;
-  color: #000000;
+width: 20px;
+height: 20px;
+fill:  currentColor;
+  
 }
+.social-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding-left: 0px;
 
+}
+.social-link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #AFB1B8;
+}
+.social-link:hover, .social-link:focus{
+  background-color: var(--accent-bgc);
+  color:var(--hero-button-text);
+}
+.social-link:hover .social-icon,
+.social-link:focus .social-icon{
+  fill: currentColor;
+}
+.client {
+  background-color: var(--primary-white-bgc);
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.client-item {
+  width: 170px;
+  border-width: 1px;
+  border-color: #757575;
+  margin-right: 30px;
+  border: 1px solid #AFB1B8;
+  border-radius: 4px;
+  text-align: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 32px;
+  padding-right: 32px;
+  color: #AFB1B8 ;
+}
+.client-item:hover, .client-item:focus{
+  border-color: var(--accent-text-color);
+}
+.client-item:hover .client-icon,
+.client-item:hover .client-icon{
+  fill: var(--accent-bgc);
+}
+.client-item:nth-child(6n) {
+  margin-right: 0px;
+}
+.client-list{
+  margin: 0px;
+  padding: 0px;
+}
+.client-icon{
+fill: currentColor;
+}
 .logo-down {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -326,9 +414,8 @@ background-color: #2196f3;
   padding-bottom: 60px;
 }
 
-.footer {
-  text-align: justify;
-}
+
+
 .contacts-list{
   margin-top: 20px;
 }
@@ -368,7 +455,55 @@ background-color: #2196f3;
 .contacts-tel:focus {
   color: var(--accent-text-color);
 }
+.footer-right{
+  width: 206px;
+  margin-left: 70px;
+}
+  
+.footer-right-list{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding-left: 0px;
+  margin-top: 20px;
+  padding-left: 0px;
+}
+.footer-right-title{
 
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: calc(16 / 14);
+letter-spacing: 0.03em;
+
+  color:var(--hero-button-text);
+  
+}
+.footer-link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color:rgba(255, 255, 255, 0.1);;
+  color:#ffffff;
+
+}
+.footer-icon{
+  fill: currentColor;
+}
+
+.footer-link:hover, .footer-link:focus{
+  background-color: var(--accent-bgc);
+  color:var(--hero-button-text);
+}
+.footer{
+  display: flex;
+  align-items: baseline;
+ justify-content: left;
+}
 .portfolio {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -423,7 +558,11 @@ background-color: #2196f3;
   border-width: 1px;
   border-color: #757575;
 }
-
+.example:hover{
+  border: 1px solid #EEEEEE;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  
+}
 .example-title {
   font-size: 18px;
   line-height: calc(36 / 18);
