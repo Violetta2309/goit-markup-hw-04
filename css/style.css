@@ -70,13 +70,11 @@ img {
   padding-bottom: 25px;
 }
 .header-post{
-  fill:#757575;
+  fill:currentColor;
   margin-right: 10px;
  
 }
-.header-post:hover, .header-post:focus{
-  fill: var(--accent-text-color);
-}
+
 
 .header-right {
   margin-left: auto;
@@ -100,13 +98,17 @@ img {
   color: var(--title-text-color);
   padding-top: 32px;
   padding-bottom: 32px;
-  
+  display: flex;
+  justify-content: center;
 }
 
-.header-contacts:hover,
+.header-contacts:hover, 
 .header-contacts:focus {
   color: var(--accent-text-color);
 }
+
+
+
 .current{
   color: var(--accent-text-color);
 }
@@ -201,16 +203,17 @@ img {
   margin-bottom: 10px;
   margin-left: 0px;
 }
-.skills-icon{
-  margin-top: 25px;
-  margin-bottom: 25px;
-}
+  
+
 .icon-background{
   background-color:#F5F4FA;
 text-align: center;
 margin-bottom: 30px;
 width: 270px;
-
+height: 120px;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 .skills-text {
   font-size: 14px;
@@ -362,28 +365,29 @@ fill:  currentColor;
   padding-top: 94px;
   padding-bottom: 94px;
 }
-.client-item {
+.client-link{
+  display: flex;
   width: 170px;
+  height: 92px;
   border-width: 1px;
   border-color: #757575;
-  margin-right: 30px;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
   text-align: center;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  padding-left: 32px;
-  padding-right: 32px;
+  justify-content: center;
+  align-items: center;
   color: #AFB1B8 ;
+  margin-right: 30px;
 }
-.client-item:hover, .client-item:focus{
+
+.client-link:hover, .client-link:focus{
   border-color: var(--accent-text-color);
 }
-.client-item:hover .client-icon,
-.client-item:hover .client-icon{
-  fill: var(--accent-bgc);
+.client-link:hover .client-icon,
+.client-link:hover .client-icon{
+  fill: var(--accent-text-color);
 }
-.client-item:nth-child(6n) {
+.client-link:nth-child(6n) {
   margin-right: 0px;
 }
 .client-list{
@@ -558,8 +562,10 @@ letter-spacing: 0.03em;
   border-width: 1px;
   border-color: #757575;
 }
-.example:hover{
-  border: 1px solid #EEEEEE;
+.example-link{
+  display: block;
+}
+.example-link:hover{
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
   
 }
